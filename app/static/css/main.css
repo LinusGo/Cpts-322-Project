@@ -1,0 +1,133 @@
+body {
+    margin: 0;
+    padding: 1px;
+    font-family: Tahoma;
+    text-align: left;
+  
+}
+.nav-container {
+    background:#f7f2f2;
+    font-family: Tahoma;
+    font-size: 50px;
+    height: 32px;
+    text-transform: uppercase;
+    border: 5px solid black;
+}
+a:hover {
+	color:#2387D9;
+}
+
+.button {
+    width : 65px;
+    padding : 3px;    
+    font-size: 16px;
+    margin : 5px;
+    padding : 5px;
+    border: 1px solid lightgray;
+}
+.button:hover {
+    background-color: 157dd3;
+    color: white;
+}
+
+.table { 
+    width : 50%;
+    padding : 5px;
+    margin: 5px;
+    border: 5px solid rgb(8, 8, 8);
+    background-color: antiquewhite;
+}
+
+.posttitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.flash-container{
+    background:#f6f6f6;
+    font-family: Tahoma;
+    font-size: 12px;
+    height: 32px;
+    text-transform: uppercase;
+}
+
+.postmessage{
+    margin: 0;
+    padding: 1px;
+    font-family: Tahoma;
+    text-align: center;
+    font-size: 20px;
+}
+
+.likecount{
+    text-align: right;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.formtitle {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.formbody {
+    margin: 0;
+    padding: 1px;
+    font-family: Tahoma;
+    text-align: center;
+    font-size: 20px;
+}
+
+.formselect {
+    text-align: right;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.postlist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post-box {
+    display: flex;
+    vertical-align: middle;
+    width: 300px;
+    border: 15px solid black;
+    padding: 50px;
+    margin: 20px;
+}
+
+@media screen and (min-width: 1200px){
+    .post-box {width: 32%}
+}
+
+@media screen and (min-width: 800px) and (max-width:1200px){
+    .post-box {width: 48%}
+}
+
+@media screen and (max-width: 800px){
+    .post-box {width: 99%}
+}
+
+.tagitem {
+    background-color: FFFFFF;
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #000000;
+    font-size: 12px;
+}
+
+.container{
+    display: flex;
+    vertical-align: middle;
+    width: 300px;
+    border: 15px solid black;
+    padding: 50px;
+    margin: 20px;
+}

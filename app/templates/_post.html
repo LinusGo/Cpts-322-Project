@@ -1,0 +1,62 @@
+<table class="table" style="width:80%" >
+    <tr>
+        <td width="20%">
+                <a href="" width="200"><img src="{{ url_for('static', filename = 'TA.png' ) }}"
+                                           width="250"> </a>
+        </td>
+        <td width="80%">
+            <p>
+            <div class="postmessage">Course Name: {{ post.course }}</div>
+            </p>
+            <p>
+                <div class="postmessage">Instructor Name: {{ post.name }}</div>
+            </p>
+            <p>
+                <div class="postmessage">Phone No.: {{ post.phone }}</div>
+            </p>
+            <p>
+                <div class="postmessage">Semester: {{ post.semester }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Numbers of TA: {{ post.numbersOfTA }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Minimum GPA: {{ post.minGPA }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Minimum Grade: {{ post.minGrade }}</div>
+            </p>
+            <p>
+            <div class="postmessage">TA Requirements: {{ post.requirements }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Posted at: {{ post.timestamp}}</div>
+            </p>
+            {% if session['instructor'] == True %}
+                <button>
+                    <span class="icon-bar">
+                        <a href="{{ url_for('editPost',postid=post.id) }}" class="button"> Edit </a>
+                    
+                    </span>
+                </button>
+                <button>
+                    <span class="icon-bar">
+                        <a href="{{ url_for('deletePost',postid=post.id) }}" class="button"> Delete </a>
+                    </span>
+                </button>
+            {% else %}
+                <button>
+                    <span class="icon-bar">
+                        <a href="{{ url_for('applyTaPosition') }}" class="button"> Apply TA Position </a>
+                    </span>
+                </button>
+
+                
+            {% endif %}
+            
+            <br>
+        </td>
+
+    </tr>
+
+</table>

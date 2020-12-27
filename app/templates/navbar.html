@@ -1,0 +1,47 @@
+<nav class="navbar navbar-default">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            {% if session['instructor'] == True %}
+                <a class="navbar-brand" href="{{ url_for('instructor') }}">Instructor Page</a>
+                <a class="navbar-brand" href="{{ url_for('instructorPost') }}">My Post</a>
+                <a class="navbar-brand" href="{{ url_for('insProfile') }}">Profile</a>
+            {% elif session['student'] == True %}
+                <a class="navbar-brand" href="{{ url_for('student') }}">Student Page</a>
+                <a class="navbar-brand" href="{{ url_for('status') }}">My Application</a>
+                <a class="navbar-brand" href="{{ url_for('sProfile') }}">Profile</a>
+            {% else %}
+                <a class="navbar-brand" href="{{ url_for('index') }}">Main Page</a>
+            {% endif %}
+        </div>
+        
+        
+        <div align="right">
+            <ul class="nav navbar-nav ">
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+        
+        <div align="right",style="float:left">
+        </div><!-- /.navbar-collapse -->
+        <div align="right" style="float:right">
+            <ul class="nav navbar-nav">
+                <a class="navbar-brand"> Current User: {{ current_user.username }}</a>
+                {% if session['logged_in'] == True %}
+                    <li class="active"><a href="{{ url_for('logout') }}">Sign Out<span class="sr-only">(current)</span></a>
+                    </li>
+                {% else %}
+                    <li class="active"><a href="{{ url_for('login') }}">Login <span class="sr-only">(current)</span></a>
+                    </li>
+                {% endif %}
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>

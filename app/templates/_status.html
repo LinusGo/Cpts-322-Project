@@ -1,0 +1,34 @@
+<table class="table" style="width:80%" >
+    <tr>
+        <td width="20%">
+                <a href="" width="200"><img src="{{ url_for('static', filename = 'TA.png' ) }}"
+                                           width="250"> </a>
+        </td>
+        <td width="80%">
+            <p>
+            <div class="postmessage">Course Name: {{ post.course}}</div>
+            </p>
+            <p>
+                <div class="postmessage">Instructor Name: {{ post.instructorname }}</div>
+            </p>
+            <p>
+                <div class="postmessage">is Pending: {{ post.isPending }}</div>
+            </p>
+            {% if current_user.student.isSelect == True %}
+                <div class="postmessage">Successfully be selected to TA </div>
+            {% else %}
+                <div class="postmessage">Waiting... </div>
+            {% endif %}
+            <button>
+                <span class="icon-bar">
+                    <a href="{{ url_for('withdraw',postid=post.id) }}" class="button">  withdraw </a>
+                </span>
+            </button>
+            
+             
+            <br>
+        </td>
+
+    </tr>
+
+</table>

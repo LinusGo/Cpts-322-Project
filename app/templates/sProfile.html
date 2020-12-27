@@ -1,0 +1,34 @@
+{% extends "base.html" %}
+{% block content %}
+    <table class="table" style="width:80%" >
+        <tr>
+            <td width="20%">
+                    <a href="" width="200"><img src="{{ url_for('static', filename = 'TA.png' ) }}"
+                                            width="250"> </a>
+            </td>
+            <td width="80%">
+                <p>
+                <div class="postmessage">Name: {{ current_user.student.name}}</div>
+                </p>
+                <p>
+                    <div class="postmessage">Major: {{ current_user.student.major }}</div>
+                </p>
+                <p>
+                    <div class="postmessage">Courses Got A: {{ current_user.student.courseA }}</div>
+                </p>
+                <p>
+                    <div class="postmessage">TA Experience: {{ current_user.student.taExp }}</div>
+                </p>
+                <button>
+                <span class="icon-bar">
+                    <a href="{{ url_for('sprofileedit') }} " class="button">  Edit </a>
+                </span>
+                </button>
+                
+                <br>
+            </td>
+
+        </tr>
+
+    </table>
+{% endblock %}

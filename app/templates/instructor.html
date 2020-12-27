@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>Instructor Page</h1>
+        <button>
+            <span class="icon-bar"></span>
+            <td><a href="{{ url_for('postTaPosition') }}" class="button"> Post TA Position </a></td>
+        </button>
+        <br>
+        <br>
+        {% for post in posts %}
+            <!-- <div class="post-box"> -->
+                {% include '_apply.html' %}
+            <!-- </div> -->
+        {% endfor %}
+    </div>
+
+{% endblock %}

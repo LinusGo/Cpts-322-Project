@@ -1,0 +1,42 @@
+<table class="table" style="width:80%">
+    <tr>
+        <td width="20%">
+                <a href="" width="200"><img src="{{ url_for('static', filename = 'TA.png' ) }}"
+                                           width="200"> </a>
+        </td>
+        <td width="80%">
+            <!-- <p>
+                <div class="postmessage">Instructor Name: {{ post.instructorname }}</div>
+            </p> -->
+            <p>
+            <div class="postmessage">Student Name: {{ post.name }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Course Catalog Number: {{ post.course }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Grade of this class: {{ post.grade }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Year/Semester class has Taken: {{ post.takenTime }}</div>
+            </p>
+            <p>
+            <div class="postmessage">Year/Semester to apply: {{ post.applyTime }}</div>
+            </p>
+            <p>
+            <div class="postmessage">IsSelected: {{ post.isSelect}}</div>
+            </p>
+            <p>
+                <div class="postmessage">Applied at: {{ post.timestamp }}</div>
+            </p>
+            <button>
+                <span class="icon-bar">
+                    <a href="{{ url_for('select',postid=post.id) }}" class="button"> Select </a>
+                </span>
+            </button>
+            <br>
+        </td>
+
+    </tr>
+
+</table>

@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <div class="container">
+        <h1>My Application</h1>
+    <br>
+        {% for post in posts %}
+            {% include '_status.html' %}
+        {% endfor %}
+    </div>
+
+{% endblock %}
